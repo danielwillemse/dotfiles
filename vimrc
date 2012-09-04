@@ -16,8 +16,6 @@ let mapleader = ","
 map <leader>v :vsplit<CR>
 map <leader>h :split<CR>
 map Y y$
-map E e
-map W w
 
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
