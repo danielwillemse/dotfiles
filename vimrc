@@ -12,6 +12,7 @@ set nowrap
 
 " Set leader to comma
 let mapleader = ","
+
 map <leader>v :vsplit<CR>
 map <leader>h :split<CR>
 map Y y$
@@ -34,6 +35,7 @@ endif
 
 " Automatically remove trailing whitespace on save
 autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,mustache} :%s/\s\+$//e
+autocmd BufWritePre *.haml call FixHaml()
 
 " No longer set swap files
 set nobackup
@@ -41,7 +43,6 @@ set nowritebackup
 set noswapfile
 
 " Quick function to place after the first occurence of a = or -.
-" This fixes a pet peeve of mine that there should be a space after it in HAML
 " /e is to silence the output if no match is found
 function! FixHaml()
   :%s/^\(\s*\)\(=\)\(\S\)/\1\2 \3/e
