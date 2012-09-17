@@ -20,6 +20,8 @@ map Y y$
 
 nmap <silent> <leader>n :NERDTree<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
+nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
+nmap <silent> <leader>ea :tabedit ${HOME}/.ackrc<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>a :Ack<space>
 nmap <silent> <leader>ww :set<space>wrap<CR>
