@@ -18,6 +18,7 @@ map <leader>v :vsplit<CR>
 map <leader>h :split<CR>
 map Y y$
 
+nmap <silent> <leader>n :NERDTree<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>a :Ack<space>
