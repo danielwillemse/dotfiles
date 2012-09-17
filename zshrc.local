@@ -1,0 +1,5 @@
+export BUNDLER_EDITOR=mvim
+
+export PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" 
