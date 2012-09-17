@@ -1,3 +1,4 @@
+call pathogen#infect()
 set shiftwidth=2
 set ruler
 set tabstop=2
