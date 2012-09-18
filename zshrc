@@ -1425,7 +1425,7 @@ ${BLUE}%n${NO_COLOUR}@%m %40<...<%B%~%b%<< "
     else
         # This assembles the primary prompt string
         if (( EUID != 0 )); then
-            PROMPT="${RED}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${BLUE}%n${NO_COLOUR}@%m %40<...<%B%~%b%<< "
+            PROMPT="${RED}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${BLUE}%n${NO_COLOUR} %40<...<%B%~%b%<< "
         else
             PROMPT="${BLUE}${EXITCODE}${WHITE}${debian_chroot:+($debian_chroot)}${RED}%n${NO_COLOUR}@%m %40<...<%B%~%b%<< "
         fi
