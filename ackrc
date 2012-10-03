@@ -2,11 +2,7 @@
 --type-add=html=.html.erb,.html.haml
 --type-add=js=.js.erb
 --type-add=css=.sass
---ignore-dir=vendor
---ignore-dir=log
---ignore-dir=tmp
---ignore-dir=doc
---ignore-dir=coverage
+--ignore-dir=vendor,log,tmp,doc,coverage
 --sort-files
 --color
 --follow
