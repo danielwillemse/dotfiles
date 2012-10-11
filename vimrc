@@ -19,6 +19,7 @@ map <leader>h :split<CR>
 map Y y$
 
 nmap <silent> <leader>n :NERDTree<CR>
+nmap <silent> <leader>f :CommandTFlush<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
 nmap <silent> <leader>ea :tabedit ${HOME}/.ackrc<CR>
