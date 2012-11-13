@@ -10,6 +10,7 @@ set autoindent
 set splitbelow
 set splitright
 set nowrap
+set fileformats=mac,unix
 
 " Set leader to comma
 let mapleader = ","
