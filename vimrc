@@ -34,6 +34,7 @@ if has("gui_running")
   syntax on
   set guioptions-=T
   set cursorline
+  hi MatchParen ctermbg=blue guibg=red
 endif
 
 " Automatically remove trailing whitespace on save
