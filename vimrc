@@ -10,7 +10,10 @@ set autoindent
 set splitbelow
 set splitright
 set nowrap
-set fileformats=mac,unix
+
+" Show invisibles
+set list
+set listchars=tab:>.,trail:.,extends:#,nbsp:
 
 " Set leader to comma
 let mapleader = ","
@@ -30,7 +33,7 @@ nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
 
 if has("gui_running")
-  set background=dark
+  set background=light
   color railscasts
   syntax on
   set guioptions-=T
@@ -39,13 +42,14 @@ if has("gui_running")
 endif
 
 " Automatically remove trailing whitespace on save
-autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,mustache} :%s/\s\+$//e
+autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,mustache,coffee} :%s/\s\+$//e
 autocmd BufWritePre *.haml call FixHaml()
 
 " No longer set swap files
 set nobackup
 set nowritebackup
 set noswapfile
+set fileformat=unix
 
 " Quick function to place after the first occurence of a = or -.
 " /e is to silence the output if no match is found
