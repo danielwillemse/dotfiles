@@ -1,4 +1,11 @@
-call pathogen#infect()
+filetype off
+
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'slim-template/vim-slim'
+
 set shiftwidth=2
 set ruler
 set tabstop=2
