@@ -3,5 +3,6 @@ alias sc='script/console'
 alias co='checkout'
 
 export BUNDLER_EDITOR=mvim
+export CPATH=/usr/local/include
 
 export PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin
