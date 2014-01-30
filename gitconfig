@@ -3,6 +3,7 @@
 	email = daniel.willemse@holder.nl
 [alias]
 	co = checkout
+	clone-branches = "! git branch -a | sed -n \"/\\/HEAD /d; /\\/master$/d; /remotes/p;\" | xargs -L1 git checkout -t"
 [push]
   default = tracking
 
