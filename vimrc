@@ -5,6 +5,9 @@ call vundle#rc()
 
 Bundle 'gmarik/vundle'
 Bundle 'slim-template/vim-slim'
+Bundle 'rking/ag.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
 
 set shiftwidth=2
 set ruler
@@ -29,13 +32,13 @@ map <leader>v :vsplit<CR>
 map <leader>h :split<CR>
 map Y y$
 
-nmap <silent> <leader>n :NERDTree<CR>
+nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>f :CommandTFlush<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
 nmap <silent> <leader>ea :tabedit ${HOME}/.ackrc<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
-nmap <silent> <leader>a :Ack<space>
+nmap <silent> <leader>a :Ag<space>
 nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
 
@@ -58,7 +61,7 @@ if has("gui_running")
 endif
 
 " Automatically remove trailing whitespace on save
-autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,mustache,coffee} :%s/\s\+$//e
+autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,slim,mustache,coffee} :%s/\s\+$//e
 autocmd BufWritePre *.haml call FixHaml()
 
 " No longer set swap files
@@ -66,6 +69,9 @@ set nobackup
 set nowritebackup
 set noswapfile
 set fileformat=unix
+
+set noerrorbells visualbell t_vb=
+autocmd GUIEnter * set visualbell t_vb=
 
 " Quick function to place after the first occurence of a = or -.
 " /e is to silence the output if no match is found
