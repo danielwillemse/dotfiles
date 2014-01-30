@@ -52,8 +52,8 @@ let g:syntastic_auto_loc_list=1
 let g:syntastic_quiet_warnings=0
 
 if has("gui_running")
-  set background=light
-  color railscasts
+  set background=dark
+  color base16-default
   syntax on
   set guioptions-=T
   set cursorline
