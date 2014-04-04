@@ -46,7 +46,7 @@ nmap <silent> <leader>wo :set<space>nowrap<CR>
 
 if has("gui_running")
   set background=dark
-  color wombat
+  color slate
   syntax on
   set guioptions-=T
   set cursorline
