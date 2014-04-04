@@ -8,6 +8,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'rking/ag.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
+Bundle 'kien/ctrlp.vim'
+Bundle 'nathanaelkane/vim-indent-guides'
 
 set shiftwidth=2
 set ruler
