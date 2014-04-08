@@ -10,6 +10,7 @@ Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
+Bundle 'flazz/vim-colorschemes'
 
 set shiftwidth=2
 set ruler
@@ -46,7 +47,7 @@ nmap <silent> <leader>wo :set<space>nowrap<CR>
 
 if has("gui_running")
   set background=dark
-  color slate
+  color railscasts
   syntax on
   set guioptions-=T
   set cursorline
