@@ -73,3 +73,7 @@ function! FixHaml()
   :%s/^\(\s*\)\(=\)\(\S\)/\1\2 \3/e
   :%s/^\(\s*\)\(-\)\(\S\)/\1\2 \3/e
 endfunction
+
+function! ConvertHashSyntax()
+  :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
+endfunction
