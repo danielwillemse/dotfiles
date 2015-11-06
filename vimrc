@@ -55,7 +55,7 @@ if has("gui_running")
 endif
 
 " Automatically remove trailing whitespace on save
-autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,slim,mustache,coffee} :%s/\s\+$//e
+autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,slim,mustache,coffee,rake} :%s/\s\+$//e
 autocmd BufWritePre *.haml call FixHaml()
 
 " No longer set swap files
