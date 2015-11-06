@@ -11,7 +11,10 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'nathanaelkane/vim-indent-guides'
 Bundle 'flazz/vim-colorschemes'
+Bundle 'NLKNguyen/papercolor-theme'
+Bundle 'ervandew/supertab'
 
+set nocompatible
 set shiftwidth=2
 set ruler
 set tabstop=2
@@ -23,6 +26,8 @@ set autoindent
 set splitbelow
 set splitright
 set nowrap
+set rnu
+set clipboard=unnamed
 
 " Show invisibles
 set list
@@ -33,9 +38,12 @@ let mapleader = ","
 
 map <leader>v :vsplit<CR>
 map <leader>h :split<CR>
+map <leader>gb :Gblame<CR>
 map Y y$
 
 nmap <silent> <leader>n :NERDTreeToggle<CR>
+nmap <silent> <leader>r :set relativenumber!<CR>
+nmap <silent> <leader>R :set number!<CR>
 nmap <silent> <leader>f :CommandTFlush<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
@@ -45,13 +53,20 @@ nmap <silent> <leader>a :Ag<space>
 nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
 
-if has("gui_running")
-  set background=dark
-  color railscasts
+"Map j and k when pressing tab to move, prevents from typing j and k though
+inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
+inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
+
+"colorscheme PaperColor
+colorscheme monokai
+set t_Co=256
+set background=dark
+
+if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
   set guioptions-=T
-  set cursorline
-  hi MatchParen ctermbg=blue guibg=red
+  set cursorline cursorcolumn
+  hi MatchParen ctermbg=blue guibg=blue
 endif
 
 " Automatically remove trailing whitespace on save
