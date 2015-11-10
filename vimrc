@@ -1,20 +1,20 @@
 filetype off
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'gmarik/vundle'
-Bundle 'slim-template/vim-slim'
-Bundle 'rking/ag.vim'
-Bundle 'tpope/vim-fugitive'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'flazz/vim-colorschemes'
-Bundle 'NLKNguyen/papercolor-theme'
-Bundle 'ervandew/supertab'
-
 set nocompatible
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/vundle'
+Plugin 'slim-template/vim-slim'
+Plugin 'rking/ag.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'scrooloose/nerdtree'
+Plugin 'kien/ctrlp.vim'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'flazz/vim-colorschemes'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'ervandew/supertab'
+
 set shiftwidth=2
 set ruler
 set tabstop=2
