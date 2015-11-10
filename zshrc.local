@@ -6,3 +6,6 @@ export BUNDLER_EDITOR=mvim
 export CPATH=/usr/local/include
 
 export PATH=$PATH:/usr/local/mysql/bin:/usr/local/sbin
+export PATH=/usr/local/bin:$PATH
+export NVM_DIR=~/.nvm
+export PGDATA=/usr/local/var/postgres
