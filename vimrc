@@ -39,7 +39,6 @@ map <leader>h :split<CR>
 map <leader>gb :Gblame<CR>
 map Y y$
 
-nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>r :set relativenumber!<CR>
 nmap <silent> <leader>R :set number!<CR>
 nmap <silent> <leader>f :CommandTFlush<CR>
