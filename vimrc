@@ -1,6 +1,5 @@
 filetype off
 
-set nocompatible
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
@@ -8,12 +7,14 @@ Plugin 'gmarik/vundle'
 Plugin 'slim-template/vim-slim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'nathanaelkane/vim-indent-guides'
+" Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ervandew/supertab'
+
+call vundle#end()
+filetype plugin indent on
 
 set shiftwidth=2
 set tabstop=2
