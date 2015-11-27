@@ -16,18 +16,16 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ervandew/supertab'
 
 set shiftwidth=2
-set ruler
 set tabstop=2
+set ruler
 set expandtab
 set showmatch
-set wildignore+=.png,.jpg
 set number
-set autoindent
 set splitbelow
 set splitright
 set nowrap
-set rnu
 set clipboard=unnamed
+set cursorline cursorcolumn
 
 " Show invisibles
 set list
@@ -67,7 +65,6 @@ set background=dark
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
   set guioptions-=T
-  set cursorline cursorcolumn
   hi MatchParen ctermbg=blue guibg=blue
 endif
 
