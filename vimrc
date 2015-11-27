@@ -31,6 +31,8 @@ set cursorline cursorcolumn
 set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:
 
+set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.ttf,*.woff,*.eot,.png,.jpg
+
 " Set leader to comma
 let mapleader = ","
 
