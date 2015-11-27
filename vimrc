@@ -52,6 +52,8 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>a :Ag<space>
 nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
+nmap <silent> <leader>ss :call SymToString()<CR>
+nmap <silent> <leader>SS :call AllSymToString()<CR>
 
 "Map j and k when pressing tab to move, prevents from typing j and k though
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
@@ -91,4 +93,12 @@ endfunction
 
 function! ConvertHashSyntax()
   :%s/:\([^ ]*\)\(\s*\)=>/\1:/g
+endfunction
+
+function! SymToString()
+  :s/\:\(\w*\)/'\1'/ge
+endfunction
+
+function! AllSymToString()
+  :%s/\:\(\w*\)/'\1'/ge
 endfunction
