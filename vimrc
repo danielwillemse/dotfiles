@@ -46,7 +46,7 @@ nmap <silent> <leader>R :set number!<CR>
 nmap <silent> <leader>f :CommandTFlush<CR>
 nmap <silent> <leader>ev :tabedit $MYVIMRC<CR>
 nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
-nmap <silent> <leader>ea :tabedit ${HOME}/.ackrc<CR>
+nmap <silent> <leader>ea :tabedit ${HOME}/.agignore<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 nmap <silent> <leader>a :Ag<space>
 nmap <silent> <leader>ww :set<space>wrap<CR>
