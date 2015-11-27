@@ -60,7 +60,7 @@ inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 
 "colorscheme PaperColor
-colorscheme monokai
+colorscheme railscasts
 set t_Co=256
 set background=dark
 
