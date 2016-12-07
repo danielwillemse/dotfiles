@@ -9,6 +9,7 @@ filetype indent on
 
 set shiftwidth=2
 set tabstop=2
+set backspace=2
 set ruler
 set expandtab
 set showmatch
@@ -24,7 +25,6 @@ set list
 set listchars=tab:>.,trail:.,extends:#,nbsp:
 
 set wildignore+=*\\tmp\\*,*.swp,*.zip,*.exe,*.ttf,*.woff,*.eot,.png,.jpg
-let g:ctrlp_custom_ignore = 'node_modules\|deps'
 
 " Set leader to comma
 let mapleader = ","
@@ -39,8 +39,10 @@ nmap <silent> <leader>ep :tabedit ${HOME}/.vim/plugin.vim<CR>
 nmap <silent> <leader>ez :tabedit ${HOME}/.zshrc.local<CR>
 nmap <silent> <leader>ea :tabedit ${HOME}/.agignore<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
+nmap <silent> <leader>pi :PlugInstall<CR>
 nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
+nmap <silent> <leader>tc :tabc<CR>
 
 "Map j and k when pressing tab to move, prevents from typing j and k though
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
@@ -50,16 +52,10 @@ inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
 nmap <silent> <leader>a :Ag<space>
+nmap <silent> <leader>f :FZF<CR>
+nmap <silent> <C-P> :FZF<CR>
 
-" colorscheme railscasts
-set t_Co=256
-set background=dark
-
-if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
-  syntax on
-  set guioptions-=T
-  hi MatchParen ctermbg=blue guibg=blue
-endif
+colorscheme railscasts
 
 " Automatically remove trailing whitespace on save
 autocmd BufWritePre *.{rb,php,erb,js,css,sass,scss,html,htm,yml,markdown,feature,haml,slim,mustache,coffee,rake,ex,exs} :%s/\s\+$//e
