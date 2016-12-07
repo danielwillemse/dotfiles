@@ -5,12 +5,7 @@ if filereadable(expand("~/.vim/plugin.vim"))
   source ~/.vim/plugin.vim
 endif
 
-" Plugin 'flazz/vim-colorschemes'
-" Plugin 'NLKNguyen/papercolor-theme'
-" Plugin 'ervandew/supertab'
-" Plugin 'elixir-lang/vim-elixir'
-
-filetype plugin indent on
+filetype indent on
 
 set shiftwidth=2
 set tabstop=2
@@ -50,7 +45,7 @@ nmap <silent> <leader>wo :set<space>nowrap<CR>
 "Map j and k when pressing tab to move, prevents from typing j and k though
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
 inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
-"
+
 " Plugin nmaps
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
