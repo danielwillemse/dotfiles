@@ -9,8 +9,7 @@ Plug 'flazz/vim-colorschemes'
 " Nav
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'rking/ag.vim'
-Plug 'kien/ctrlp.vim'
-Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
+Plug 'vim-ctrlspace/vim-ctrlspace'
 
 " Git
 Plug 'tpope/vim-fugitive'
@@ -18,3 +17,7 @@ call plug#end()
 
 " Plugin configs
 let NERDTreeShowHidden=1
+
+if executable("ag")
+    let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif

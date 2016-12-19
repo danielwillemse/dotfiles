@@ -19,6 +19,8 @@ set splitright
 set nowrap
 set clipboard=unnamed
 set cursorline cursorcolumn
+set nocompatible
+set hidden
 
 " Show invisibles
 set list
@@ -43,6 +45,10 @@ nmap <silent> <leader>pi :PlugInstall<CR>
 nmap <silent> <leader>ww :set<space>wrap<CR>
 nmap <silent> <leader>wo :set<space>nowrap<CR>
 nmap <silent> <leader>tc :tabc<CR>
+nmap <leader>te :tabedit<space>
+nmap <tab> gt
+nmap <s-tab> gT
+nnoremap <silent><C-p> :CtrlSpace O<CR>
 
 "Map j and k when pressing tab to move, prevents from typing j and k though
 inoremap <expr> j pumvisible() ? "\<C-N>" : "j"
@@ -51,9 +57,8 @@ inoremap <expr> k pumvisible() ? "\<C-P>" : "k"
 " Plugin nmaps
 nmap <silent> <leader>gb :Gblame<CR>
 nmap <silent> <leader>n :NERDTreeToggle<CR>
+nmap <silent> <leader>m :NERDTreeFind<CR>
 nmap <silent> <leader>a :Ag<space>
-nmap <silent> <leader>f :FZF<CR>
-nmap <silent> <C-P> :FZF<CR>
 
 colorscheme railscasts
 
