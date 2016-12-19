@@ -17,5 +17,4 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 " Plugin configs
-autocmd vimenter * NERDTree
 let NERDTreeShowHidden=1
