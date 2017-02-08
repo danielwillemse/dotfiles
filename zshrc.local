@@ -16,3 +16,6 @@ eval "$(rbenv init -)"
 eval `keychain -q --eval id_rsa`
 
 ulimit -S -n 2048
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
