@@ -1,4 +1,6 @@
 alias nv='nvim'
+alias bbe='cd ~/Projects/betty6'
+alias bbr='cd ~/Projects/bb'
 
 export BUNDLER_EDITOR=nvim
 export CPATH=/usr/local/include
